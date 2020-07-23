@@ -18,7 +18,9 @@ class TaskController extends Controller
                 "title" => $item->title,
                 "priority" => $item->priority,
                 "status" => $item->status,
+                "created_at" => $item->created_at,
                 "tags" => $item->tags()->get()
+
             ];
             $rows[] = $row;
         }
@@ -40,6 +42,7 @@ class TaskController extends Controller
             "title" => $item->title,
             "priority" => $item->priority,
             "status" => $item->status,
+            "created_at" => $item->created_at,
             "tags" => $item->tags()->get()
         ];
         if (isset($row)) {
